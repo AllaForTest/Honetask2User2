@@ -10,3 +10,18 @@
         sleep(3000);
         WebDriverRunner.closeWindow();
     }
+
+//add New Test
+
+@Test
+    public void userCanLoginByUsername() {
+        open("https://");
+        getWebDriver().manage().window().maximize();
+        $(By.xpath("//button[@type='submit']")).click();
+        $(By.xpath("//input [@id ='element191140']")).setValue(generatedRandomFirstName());
+        $(By.xpath("//input [@id ='element725746']")).setValue(generatedRandomText());
+        $(By.xpath("//button[@type='submit']")).click();
+        $(By.xpath("//div[@class='text--YNVOfXI']")).shouldHave(text("Thank you"));
+        sleep(3000);
+        WebDriverRunner.closeWindow();
+    }
